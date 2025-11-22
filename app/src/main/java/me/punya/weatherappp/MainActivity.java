@@ -45,7 +45,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
     private static final int LOCATION_REQUEST_CODE = 1;
-    private static final String API_KEY = "12ab2a1e78124044939130446252111";
+    private static final String API_KEY = "";
     RecyclerView forecastRecycler;
     ForecastAdapter forecastAdapter;
     List<ForecastDayModel> forecastList = new ArrayList<>();
