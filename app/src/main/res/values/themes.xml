@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.WeatherAppp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Light Mode Colors -->
+        <item name="colorPrimary">#2196F3</item>
+        <item name="android:windowBackground">#F0F0F0</item>
+    </style>
+
+    /* Dark Theme */
+
+    <style name="Theme.WeatherApp.Dark" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Dark Mode Colors -->
+        <item name="colorPrimary">#90CAF9</item>
+        <item name="android:windowBackground">#121212</item>
+    </style>
+
+    <style name="Theme.WeatherApp" parent="Theme.Material3.DayNight.NoActionBar" />
+</resources>
