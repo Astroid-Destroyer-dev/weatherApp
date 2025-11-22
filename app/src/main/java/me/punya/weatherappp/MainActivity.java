@@ -45,7 +45,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
     private static final int LOCATION_REQUEST_CODE = 1;
-    private static final String API_KEY = "";
+    private static final String API_KEY = "12ab2a1e78124044939130446252111";
     RecyclerView forecastRecycler;
     ForecastAdapter forecastAdapter;
     List<ForecastDayModel> forecastList = new ArrayList<>();
@@ -201,12 +201,12 @@ public class MainActivity extends AppCompatActivity {
     private void loadDynamicAnimation(String condition) {
         condition = condition.toLowerCase();
         if (condition.contains("rain")) weatherAnimation.setAnimation(R.raw.rainy);
-        else if (condition.contains("cloud")) weatherAnimation.setAnimation(R.raw.rainy);
-        else if (condition.contains("sun") || condition.contains("clear"))
+        else if (condition.contains("cloud") || condition.contains("mist")) weatherAnimation.setAnimation(R.raw.cloudy);
+        else if (condition.contains("sun")   || condition.contains("clear"))
             weatherAnimation.setAnimation(R.raw.sunny);
         else if (condition.contains("storm")) weatherAnimation.setAnimation(R.raw.stormy);
         else if (condition.contains("snow")) weatherAnimation.setAnimation(R.raw.snowy);
-        else weatherAnimation.setAnimation(R.raw.rainy);
+        else weatherAnimation.setAnimation(R.raw.sunny);
         weatherAnimation.playAnimation();
     }
 
@@ -255,7 +255,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupForecastRecycler() {
         forecastRecycler = findViewById(R.id.recyclerForecast);
-        forecastRecycler.setHasFixedSize(true);
+        //forecastRecycler.setHasFixedSize(true);
         forecastRecycler.setLayoutManager(
                 new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         );
